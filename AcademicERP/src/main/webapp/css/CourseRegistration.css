@@ -1,0 +1,26 @@
+.error-section{
+    background-color: pink;
+    color: darkred;
+}
+
+#modal-content{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.modal-show-btn-class{
+    visibility: hidden;
+    background: red;
+    border-radius: 50%;
+    color: white;
+}
+
+.right{
+    float: right;
+}
+
+.panel-heading-font{
+    font-size: medium;
+    font-weight: bold;
+    cursor: pointer;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    async function clicked() {
+        console.log("Button clicked");
+        let response = await fetch('api/courses/initconf', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json;charset=utf-8'
+            }
+        });
+        let map = await response.json();
+        console.log(response);
+        console.log(map);
+    }
+</script>
+<h1>HELLO WORLD</h1>
+<button onclick="clicked()">Click</button>
+</body>
+</html>

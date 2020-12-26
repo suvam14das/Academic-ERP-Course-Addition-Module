@@ -1,0 +1,278 @@
+<script src="js/CourseRegistration.js"></script>
+<link rel="stylesheet" href="css/CourseRegistration.css">
+
+
+<div class="modal" id="modal-display">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <!-- Modal Header -->
+            <div class="modal-header">
+                <h4 id="modal-title"class="modal-title"></h4>
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+
+            <!-- Modal body -->
+            <div class="modal-body">
+                <div id="modal-content"></div>
+            </div>
+
+            <!-- Modal footer -->
+            <div id="modal-botton"class="modal-footer"></div>
+
+        </div>
+    </div>
+</div>
+
+
+    <div style="text-align: center">
+        <h3 class="bold">COURSE CREATION</h3>
+    </div>
+    <button id="modal-show" data-toggle="modal" data-target="#modal-display" class="right modal-show-btn-class">
+        !
+    </button>
+    <br>
+
+    <div class="panel panel-default">
+        <div id="basic-details-header" class="panel-heading panel-heading-font required">Basic Course Details</div>
+        <div id="basic-details-body" class="panel-body">
+
+            <div class="col-sm-12">
+                <div id="basic-details-error" class="error-section"></div>
+            </div>
+
+            <!-- Course name-->
+            <div class="col-sm-12">
+                <div class="input-row">
+                    <label class="form-label required">Course Name</label>
+                    <input id="course-name" type="text" class="form-control">
+                </div>
+            </div>
+
+            <!-- Course description-->
+            <div class="input-feild col-sm-12">
+                <div class="input-row">
+                    <label class="form-label ">Description</label>
+                    <input id="course-description" type="text" class="form-control">
+                </div>
+            </div>
+
+            <!-- Course credit-->
+            <div class="input-feild col-sm-6">
+                <div class="input-row">
+                    <label class="form-label required">Credit</label>
+                    <input id="course-credit" type="text" class="form-control">
+                </div>
+            </div>
+
+            <!-- Course capacity-->
+            <div class="input-feild col-sm-6">
+                <div class="input-row">
+                    <label class="form-label required">Capacity</label>
+                    <input id="course-capacity" type="text" class="form-control">
+
+                </div>
+            </div>
+
+            <!-- Course year-->
+            <div class="input-feild col-sm-6">
+                <div class="input-row">
+                    <label class="form-label required">Year</label>
+                    <input id="course-year" type="text" class="form-control">
+                </div>
+            </div>
+
+            <!-- Course term-->
+            <div class="input-feild col-sm-6">
+                <div class="input-row">
+                    <label class="form-label required">Term</label>
+                    <input id="course-term" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="input-feild col-sm-12">
+                <div class="input-row">
+                    <label class="form-label required">Faculty</label>
+                    <select id="course-faculty" class="form-control"></select>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <!--panel for handling pre-requisites courses-->
+    <div class="panel panel-default">
+        <div id="course-domain-header" class="panel-heading panel-heading-font required">Course Domains</div>
+        <div id="course-domain-body" class="panel-body">
+
+            <div class="col-sm-12">
+                <div id="domain-error" class="error-section"></div>
+            </div>
+
+            <!-- Course domain-->
+            <div class="input-feild col-sm-6">
+                <div class="input-row">
+                    <label class="form-label">Domain</label>
+                    <select id="course-domain" class="form-control"></select>
+                    <br/>
+                    <button id="add-domain" type="button" class="btn btn-success">
+                        Add Domain
+                    </button>
+                </div>
+            </div>
+
+            <table id="domain-table" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Domain</th><th></th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div id="course-specialization-header" class="panel-heading panel-heading-font required">Course Specialization</div>
+        <div id="course-specialization-body" class="panel-body">
+
+            <div class="col-sm-12">
+                <div id="specialization-error" class="error-section"></div>
+            </div>
+
+            <!-- Course specialization-->
+            <div class="input-feild col-sm-6">
+                <div class="input-row">
+                    <label class="form-label">Specilization</label>
+                    <select id="course-specialization" class="form-control"></select>
+                    <br/>
+                    <button id="add-specialization" type="button" class="btn btn-success">
+                        Add Specialization
+                    </button>
+                </div>
+            </div>
+
+            <br/>
+
+            <table id="specialization-table" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Specialization</th><th></th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div id="course-pre-req-header" class="panel-heading panel-heading-font">Course Pre-requisite</div>
+        <div id="course-pre-req-body" class="panel-body">
+
+            <div class="col-sm-12">
+                <div id="pre-requisite-error" class="error-section"></div>
+            </div>
+
+            <div class="col-sm-6">
+                <div class="input-row">
+                    <label class="form-label required">Year</label>
+                    <input id="pre-year" type="text" class="form-control">
+                </div>
+            </div>
+            <div class="input-feild col-sm-6">
+                <div class="input-row">
+                    <label class="form-label required">Term</label>
+                    <input id="pre-term" type="text" class="form-control">
+                </div>
+            </div>
+
+            <!--<button id="get-pre-req" type="button" class="btn btn-success">Add Pre-requisite</button>-->
+
+            <!-- Input feilds for accepting the pre-requisite of course-->
+            <div class="col-sm-12">
+                <div class="input-row">
+                    <label class="form-label">Pre-requisite Course</label>
+                    <select id="pre-course" class="form-control"></select>
+                    <br/>
+                    <button id="get-pre-req" type="button" class="btn btn-info">Find Courses</button>
+                    <button id="add-pre-req" type="button" class="btn btn-success" disabled="true">
+                        Add Pre-requisite
+                    </button>
+
+                </div>
+            </div>
+            <br/>
+
+
+            <!-- table displaying the pre-requisites for course-->
+            <table id="pre-req-table" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Course</th><th>Year</th><th>Term</th><th></th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+
+        </div>
+    </div>
+
+    <div class="panel panel-default">
+        <div id="course-schedule-header" class="panel-heading panel-heading-font required">Course Schedule</div>
+        <div id="course-schedule-body" class="panel-body">
+
+            <div class="col-sm-12">
+                <div id="schedule-details-error" class="error-section"></div>
+            </div>
+
+            <div class="input-feild col-sm-6">
+                <div class="input-row">
+                    <label class="form-label required">Room</label>
+                    <input id="schedule-room" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="input-feild col-sm-6">
+                <div class="input-row">
+                    <label class="form-label">Building</label>
+                    <input id="schedule-building" type="text" class="form-control">
+                </div>
+            </div>
+
+            <div class="input-feild col-sm-6">
+                <div class="input-row">
+                    <label class="form-label required">Time</label>
+                    <input id="schedule-time" type="time" class="form-control">
+                    <br/>
+                    <button id="add-schedule" type="button" class="btn btn-success">Add Schedule</button>
+                </div>
+            </div>
+
+            <div class="input-feild col-sm-6">
+                <div class="input-row">
+                    <label class="form-label required">Day</label>
+                    <select id="schedule-day" class="form-control"></select>
+                </div>
+            </div>
+            <br/>
+
+
+            <!-- table displaying the pre-requisites for course-->
+            <table id="schedule-table" class="table table-striped">
+                <thead>
+                <tr>
+                    <th>Room</th><th>Building</th><th>Time</th><th>Date</th><th></th><th></th>
+                </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+    <div class="input-feild col-sm-6">
+        <div class="input-row">
+            <button id="submit-course" type="button" class="btn btn-success">Submit</button>
+        </div>
+    </div>

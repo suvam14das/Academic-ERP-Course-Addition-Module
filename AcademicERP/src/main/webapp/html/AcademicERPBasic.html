@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <!-- title of the page-->
+    <title>Academic ERP</title>
+
+    <!-- meta data for the page-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Academic ERP frontend">
+
+    <!-- Important links of the bootstrap, jquery, custom scripts etc-->
+    <!-- bootstrap, jquery and compiled js files-->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <!-- custom css and js -->
+    <link rel="stylesheet" href="css/AcademicERPBasic.css">
+    <script src="js/AcademicERPBasic.js"></script>
+</head>
+<body>
+
+    <!-- This is for top nav bar of the page. Should be constant throughout the application-->
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="home.html">ACADEMIC ERP</a>
+            </div>
+            <!--
+            <div class="navbar-header position-center">
+                <span id="name-div" class="navbar-brand"></span>
+            </div>
+            -->
+            <span id="logout-btn" class="logout">LOGOUT</span>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row content">
+
+            <!--This is for side nav bar and should be constant throughout the application-->
+            <div class="col-sm-2 sidenav">
+                <h2>Operations</h2>
+                <ul id="operation-list" class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="home.html">HOME</a></li>
+                    <li><a href="CourseRegistration.html">CREATE COURSE</a></li>
+                </ul><br>
+            </div>
+            <br>
+            <div id="variable-content" class="col-sm-9 dynamic-container"></div>
+        </div>
+    </div>
+
+</body>
+</html>

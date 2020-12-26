@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/academicerpdb?createDatabaseIfNotExist=true</property>
+        <property name="connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="connection.username">jarvish</property>
+        <property name="connection.password">password</property>
+        <!--<property name="dialect">org.hibernate.dialect.MySQLDialect</property>-->
+
+        <!-- DB schema will be updated if needed -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <property name="show_sql">true</property>
+
+        <!-- Mapping for annotated class -->
+        <mapping class="com.erp.academic.bean.Course" />
+        <mapping class="com.erp.academic.bean.Department" />
+        <mapping class="com.erp.academic.bean.Domain" />
+        <mapping class="com.erp.academic.bean.Employee" />
+        <mapping class="com.erp.academic.bean.Schedule" />
+        <mapping class="com.erp.academic.bean.Specialization" />
+    </session-factory>
+</hibernate-configuration>
